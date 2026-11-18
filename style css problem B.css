@@ -1,0 +1,63 @@
+/* External CSS for e-Café Campus navigation bar */
+
+/* Remove bullets and default spacing from the navigation list */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #75452e;
+}
+
+/* Display navigation links as blocks */
+nav li {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    padding: 14px 24px;
+    color: #ffffff;
+    background-color: #75452e;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* Change the menu background when the pointer moves over a link */
+nav a:hover {
+    background-color: #d69a5b;
+    color: #352015;
+}
+
+/* Keep all four link states in the correct order */
+nav a:link {
+    color: #ffffff;
+}
+
+nav a:visited {
+    color: #f4dfcb;
+}
+
+nav a:hover {
+    color: #352015;
+}
+
+nav a:active {
+    color: #ffffff;
+    background-color: #9c3d2e;
+}
+
+/* Responsive navigation spacing */
+@media (max-width: 500px) {
+    nav a {
+        padding: 12px 14px;
+        font-size: 11px;
+    }
+}
