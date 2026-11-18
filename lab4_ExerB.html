@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Café Campus</title>
+    <link rel="stylesheet" href="cafe.css">
+
+    <style>
+        /* General page styling */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #fffaf3;
+            color: #333333;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 35px 15px;
+            background-color: #5b3425;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            text-decoration: overline;
+            font-size: 38px;
+        }
+
+        h2 {
+            color: #5b3425;
+            text-decoration: underline;
+            text-underline-offset: 6px;
+        }
+
+        main {
+            width: 90%;
+            max-width: 1000px;
+            margin: 30px auto;
+        }
+
+        section {
+            margin-bottom: 35px;
+            padding: 25px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 3px 12px rgba(70, 42, 25, 0.08);
+        }
+
+        /* Intro paragraph and highlighted prices */
+        .intro {
+            padding: 12px;
+            background-color: #fcebd8;
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: #c0392b;
+            font-weight: bold;
+        }
+
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        article {
+            padding: 18px;
+            border: 1px solid #ead8c8;
+            border-radius: 8px;
+            background-color: #fffdf9;
+        }
+
+        article h3 {
+            margin-top: 0;
+            color: #75452e;
+        }
+
+        .old-price {
+            color: #888888;
+            text-decoration: line-through;
+            margin-right: 8px;
+        }
+
+        .new-price {
+            color: #c0392b;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Video and responsive sizing */
+        figure {
+            margin: 0;
+            text-align: center;
+        }
+
+        video {
+            display: block;
+            width: 100%;
+            max-width: 650px;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 8px;
+            background-color: #24170f;
+        }
+
+        figcaption {
+            margin-top: 10px;
+            color: #725c4d;
+            font-size: 14px;
+        }
+
+        /* Feedback form */
+        .feedback-form {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 22px;
+            border: 1px solid #e1cbb8;
+            border-radius: 8px;
+            background-color: #fff7ed;
+        }
+
+        .feedback-form label,
+        .feedback-form legend {
+            color: #5b3425;
+            font-weight: bold;
+        }
+
+        .feedback-form input[type="text"],
+        .feedback-form input[type="email"] {
+            display: block;
+            width: 100%;
+            margin: 6px 0 16px;
+            padding: 11px;
+            border: 1px solid #cdb9a8;
+            border-radius: 5px;
+        }
+
+        .feedback-form fieldset {
+            margin: 15px 0;
+            padding: 12px;
+            border: 1px solid #d8c3b1;
+            border-radius: 5px;
+        }
+
+        .feedback-form fieldset label {
+            display: inline-block;
+            margin: 7px 14px 5px 0;
+            font-weight: normal;
+        }
+
+        .feedback-form button {
+            width: 100%;
+            padding: 12px;
+            border: 0;
+            border-radius: 5px;
+            background-color: #75452e;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .feedback-form button:hover {
+            background-color: #b8753d;
+        }
+
+        footer {
+            padding: 25px 15px;
+            background-color: #3d281e;
+            color: white;
+            text-align: center;
+        }
+
+        footer address {
+            font-style: normal;
+        }
+
+        footer a,
+        footer a:link,
+        footer a:visited {
+            color: #ffd39c;
+        }
+
+        /* Responsive design */
+        @media (max-width: 650px) {
+            .menu-items {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 18px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Error corrections based on the original given code:
+         Error 1 (Line 7): HTML comment was used inside CSS; replaced with a valid CSS comment.
+         Error 2 (Line 9): list-style-type value "no" was invalid; changed to "none".
+         Error 3 (Lines 13-16): link states were in the wrong order; changed to link, visited, hover, active.
+         Error 4 (Line 17): "overlined" was invalid; changed to "overline".
+         Error 5 (Line 18): the color property was missing a colon; corrected the CSS declaration.
+         Error 6 (Line 19): selector #intro did not match the paragraph class="intro"; changed to .intro.
+         Error 7 (Line 22): the .intro CSS rule was missing a closing brace; added it.
+         Error 8 (Line 22): highlight was missing the class dot; changed to .highlight.
+         Error 9 (Lines 42 and 46): the same id="item" was repeated; removed the duplicate IDs.
+         Error 10 (Line 34): Menu link did not point to an ID; changed href="menu" to href="#menu".
+         Error 11 (Line 53): video tag did not have controls; added controls.
+         Error 12 (Line 54): video source type was incomplete; changed it to video/mp4.
+         Extension: added external CSS, old prices, video caption, feedback form and contact email. -->
+
+    <!-- Header and navigation -->
+    <header>
+        <h1>e-Café Campus</h1>
+        <p>Fresh coffee, tasty food and a comfortable place to relax.</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Menu section -->
+        <section id="menu">
+            <h2>Today's Menu</h2>
+            <p class="intro">Freshly brewed coffee and local delights every day. Enjoy our special student promotions!</p>
+
+            <div class="menu-items">
+                <article>
+                    <h3>Kopi Tarik</h3>
+                    <p>Traditional pulled coffee with a smooth and rich taste.</p>
+                    <p>Promotion: <span class="old-price">RM 4.50</span><span class="new-price">RM 3.50</span></p>
+                </article>
+
+                <article>
+                    <h3>Nasi Lemak</h3>
+                    <p>Fragrant coconut rice served with sambal, egg and crispy anchovies.</p>
+                    <p>Promotion: <span class="old-price">RM 6.50</span><span class="new-price">RM 5.00</span></p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Promotional video section -->
+        <section id="video">
+            <h2>Watch Our Story</h2>
+            <figure>
+                <video controls preload="metadata" poster="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1000&q=80">
+                    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>Enjoy a relaxing break and discover the atmosphere of e-Café Campus.</figcaption>
+            </figure>
+        </section>
+
+        <!-- Feedback form section -->
+        <section id="feedback">
+            <h2>Share Your Feedback</h2>
+            <p>Tell us about your visit and your favourite café items.</p>
+
+            <form class="feedback-form" action="#" method="get">
+                <label for="customer-name">Name</label>
+                <input type="text" id="customer-name" name="name" placeholder="Enter your name" required>
+
+                <label for="customer-email">E-mail</label>
+                <input type="email" id="customer-email" name="email" placeholder="example@email.com" required>
+
+                <fieldset>
+                    <legend>Visit Type</legend>
+                    <label><input type="radio" name="visit-type" value="Dine-in" required> Dine-in</label>
+                    <label><input type="radio" name="visit-type" value="Take-away"> Take-away</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Favourite Items</legend>
+                    <label><input type="checkbox" name="favourite" value="Kopi Tarik"> Kopi Tarik</label>
+                    <label><input type="checkbox" name="favourite" value="Nasi Lemak"> Nasi Lemak</label>
+                    <label><input type="checkbox" name="favourite" value="Tea"> Tea</label>
+                    <label><input type="checkbox" name="favourite" value="Cake"> Cake</label>
+                </fieldset>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer and contact information -->
+    <footer id="contact">
+        <p>&copy; 2026 e-Café Campus</p>
+        <address>Contact us: <a href="mailto:ecafecampus@example.com">ecafecampus@example.com</a></address>
+    </footer>
+</body>
+</html>
